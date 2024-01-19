@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    transition:all 0.1s ease-in;
+}
+body{
+    background: #000;
+   width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+	animation: gradient 5s ease infinite;
+    justify-content: center;
+}
+.bg {
+    animation:slide 5s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(43, 214, 16) 50%,rgb(238, 245, 34), #000 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    background: #ff22cb;
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  @keyframes slide {
+    0% {
+      transform:translateX(-55%);
+    }
+    25%{
+        transform:translateX(25%);
+        background-color: darkblue;
+      }
+    50%{
+        transform:translateX(-75%);
+    }
+    75%{
+        transform:translateX(-15%);
+        background-color: rgb(234, 73, 14);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }  
+.container{
+    position: absolute;
+    background: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    width: 300px;
+    border: 1px solid #ccc;
+    gap: 10px;
+    border-radius: 20px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    /* grid-template-rows: minmax(180px); */
+    gap: 10px;
+}
+.display-btn{
+    align-self:flex-end ;
+    height: 40px;
+    width: 40px;
+    border-radius:50%;
+    position: absolute;
+    margin-top: -458px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color:white;
+    border: none;
+}
+.display-btn:hover{
+    background-color: black;
+    color: white;
+}
+.display{
+    display: flex;
+    justify-content: space-between;
+    margin-top:-10px;
+    height:140px;
+    width: 100%;
+    content: ' ';
+    flex-direction: column;
+    border-radius:20px 20px 0 0 ;
+    text-align: end;
+    border: 1px solid #ccc;
+    padding:10px;
+    font-size: 36px;
+    font-weight: 500;
+    background-color:rgb(150, 11, 230);
+    cursor: pointer;
+}
+.btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 30%;
+    color:white;
+    background-color: rgb(20, 17, 17);
+    font-size: 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: black;
+    background-color: chartreuse;
+}
+.buttons .btn:active {
+    transform: scale(0.99);
+  }
+.btn:nth-child(19){
+grid-column: span(2);
+}
+.dark-mode {
+    color: black;
+    background-color: white;
+  }
